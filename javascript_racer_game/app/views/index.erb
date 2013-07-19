@@ -1,0 +1,85 @@
+<h1>GAME ON</h1>
+
+
+<div class="container">
+  <table class="racer_table">
+     <tr id="player_81_strip">
+      <td class="active_81"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td id="finish_line_81"></td>
+    </tr>
+    <tr class="gutter">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id="player_80_strip">
+      <td class="active_80"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td id="finish_line_80"></td>
+    </tr>
+    <tr class="gutter">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr id="player_otter_strip">
+      <td class="active_otter"></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td id="finish_line_otter"></td>
+    </tr>
+
+  </table>
+  
+  <div class="winner">
+    <h2>winner</h2>
+    <div class="button bar">
+    <div class="win_buttons"><a href="/"><button class="myButton" id="start_over">Start Over</button></a></div>
+    <div class="win_buttons"><form action="/rematch/<%= @player1.id %>/<%= @player2.id %>" method="post"><input type="submit" id="rematch_btn" value="Rematch"></form></div>
+  </div></div>
+<script type="text/javascript">
+    var squirrel_id = "<%= @player1.initials %>";
+    var fox_id = "<%= @player2.initials %>";
+</script>
+</div>
