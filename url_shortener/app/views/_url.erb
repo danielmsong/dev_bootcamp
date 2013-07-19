@@ -1,0 +1,23 @@
+<div class="container">
+
+  <% if @url && @url.errors.any? %>
+      <p>
+        <%= @url.errors.full_messages %>
+      </p>
+    <% end %> 
+    
+    <h2>Your links are like ugly zits.</h2>
+    <h2>Squeeze them into something shorter:</h2>
+    
+    <br>
+    
+    <form action='/urls' method='post'>
+      <input id="text-field" type="text" name="link">
+      <input class="button" type="submit" value="SQUEEZE!">
+    </form>
+    
+    <br> 
+
+  </div>
+
+</div>

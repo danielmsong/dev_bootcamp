@@ -1,0 +1,27 @@
+<div class="container">
+  <% if @url && @url.errors.any? %>
+    <p>
+      <%= @url.errors.full_messages %>
+    </p>
+  <% end %> 
+  <h1>Welcome to URL Shortener!</h1>
+  <br>
+  <form action='/urls' method='post'>
+    <label> Shorten your link: </label>
+    <br><br>
+    <input type="text" name="link">
+    <input type="submit" value="shorten!">
+  </form>
+  <br> 
+  <h2> Welcome to your links! </h2>
+  <ul>
+    <% Url.all.each do |url| %>
+    <li>URL: <%= url.url %></li>
+    <li>Shortened Link: <a href="/<%= url.shortened_url %>" target= _blank><%= url.shortened_url %></a></li>
+
+    <br>
+    <% end %>
+  </ul>
+</div>
+
+

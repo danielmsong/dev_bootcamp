@@ -1,0 +1,27 @@
+
+
+<%= erb :_url %> 
+
+<div class="signup-button">
+  
+  <a id="sign_up" href="/create_user">Sign up to track popped zits!<br>  </a>
+
+</div>
+
+<div class="login">
+
+  <h2>Log In</h2>
+
+  <form action="/login" method="post">
+    <label>email</label>
+    <input type="text" name="email" size="10">
+    <br><br>
+    <label>password</label>
+    <input type="text" name="password" size="10">
+    <br><br>
+    <input id="login-button" type="submit" value="log in!">
+  </form>
+
+</div>
+
+<%= erb :_shortened %>

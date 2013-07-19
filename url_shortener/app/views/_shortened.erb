@@ -1,0 +1,32 @@
+<div class="container">
+
+  <h3> Popped zits: </h3>
+
+  <% if current_user %>
+
+  <ul> 
+    <% User.find(current_user).urls.each do |url| %>
+    <li>URL: <%= url.url %></li>
+    <li>Shortened Link: <a href="/url/<%= url.shortened_url %>" target= _blank><%= url.shortened_url %></a></li>
+
+    <br>
+
+    <% end %>
+  </ul>
+
+
+  <% else %>
+
+  <ul>
+    <% Url.all.each do |url| %>
+    <li>URL: <%= url.url %></li>
+    <li>Shortened Link: <a href="/url/<%= url.shortened_url %>" target= _blank><%= url.shortened_url %></a></li>
+
+    <br>
+
+    <% end %>
+  </ul>
+
+  <% end %>
+
+</div>
