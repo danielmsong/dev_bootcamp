@@ -1,0 +1,13 @@
+<h1>Daniel Craigslist Categories</h1>
+
+<% if @categories.any? %>
+  
+  <% @categories.each do |category| %>
+    <a href="/categories/<%= category.id %>"><%= category.name %></a>
+  <% end %>
+  
+<% else %>
+  <p>No categories found.</p>  
+<% end %>
+
+<a href="/categories/new">Create new category</a>

@@ -1,0 +1,10 @@
+<%= form_for @post do |f| %>
+  <%= f.text_field :title, placeholder: "title"%>
+  <%= f.text_area :description, placeholder: "description" %>
+  <%= f.text_field :price, placeholder: "price" %>
+  <%= f.hidden_field :category_id, :value => @category.id %>
+  <%= f.text_field :email, placeholder: "daniel@craig.com"%>
+  <%= f.submit("Create New Post") %>
+<% end %>
+
+<a href="/categories/<% @category.id %>">Cancel Post & return to category page</a>

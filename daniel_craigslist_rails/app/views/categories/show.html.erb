@@ -1,0 +1,13 @@
+<h1>Placeholder View for Categories</h1>
+<% if @posts.any? %>
+  
+  <% @posts.each do |post| %>
+    <a href="/posts/<%= post.id %>"><p><%= post.title %></p></a>
+  <% end %>
+
+<% else %>
+  <p>No posts for this category yet.</p>
+<% end %>
+
+<a href="/categories/<%= @category.id %>/new">Create new post</a>
+<a href="/categories">Return to home</a>
