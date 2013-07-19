@@ -1,0 +1,31 @@
+<h2><%= @post.title %></h2>
+
+<h4>By <%= @post.user.username %></h4>
+
+<p><%= @post.content %></p>
+
+<form action="/upvote/post/<%=@post.id%>" method="post">
+  <% if current_user %>
+    <input type="submit" name="vote" value="upvote">
+  <% end %>
+</form> <%= @post.pvotes.first.votecount %>
+
+<hr>
+
+<br>
+  <% ordered = @post.comments.sort_by {|comment| comment.cvotes.first.votecount} %>
+  
+  <% ordered.reverse.each do |comment| %>
+     <p><strong><%= comment.user.username %></strong> commented</p> 
+     <p><%= comment.text %></p>
+     <form action="/upvote/comment/<%=comment.id%>" method="post">
+      
+      <% if current_user %>
+        <input type="submit" name="vote" value="upvote">
+      <% end %>
+     </form> 
+     <%= comment.cvotes.first.votecount %>
+     
+     <br>
+  <% end %>
+

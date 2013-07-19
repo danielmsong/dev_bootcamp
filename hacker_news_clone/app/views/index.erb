@@ -1,0 +1,8 @@
+<div class="container">
+   <% ordered = @posts.sort_by {|post| post.pvotes.first.votecount} %>
+     <% ordered.reverse.each do |post| %>
+
+    <p class="posts_front_page"><%=post.pvotes.first.votecount%> <a href="/post/<%=post.id%>"><%= post.title %></a></p>
+  <% end %>
+
+</div>

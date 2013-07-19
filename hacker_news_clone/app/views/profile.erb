@@ -1,0 +1,18 @@
+<% if current_user %>
+<h1> Hello <%= current_user.username %> </h1>
+
+<h3> Your posts: </h3>
+<% current_user.posts.each do |post| %> 
+<p><a href="/post/<%=post.id%>"><%= post.title %></a></p>
+<% end %>
+<p></p>
+
+<h3> Your comments: </h3>
+<% current_user.comments.each do |comment| %>
+<p>Commented on: 
+  <a href="/post/<%= comment.post.id%>"><%= comment.post.title %></a><br> Comment: <%= comment.text %></p>
+<% end %>
+
+
+
+<% end %>
