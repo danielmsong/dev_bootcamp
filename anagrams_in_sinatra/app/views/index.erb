@@ -1,0 +1,14 @@
+<p> Show  a list of anagrams for <%= @word %> </p>
+
+<br>
+
+<p>  Anagram List: </p>
+
+<ul>
+  <% @anagrams.each do |word| %>
+  <li><%= word %>
+  </li>
+<% end %>
+</ul>
+
+
