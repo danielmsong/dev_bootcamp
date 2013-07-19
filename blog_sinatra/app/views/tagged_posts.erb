@@ -1,0 +1,10 @@
+<% @requested_tag.posts.each do |post| %>
+
+<div class="post" id="tagged">
+  <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h1>
+  <h3>by <%= post.author %></h2>
+  <p> <%= post.content %></p>
+</div>
+
+
+<% end %>

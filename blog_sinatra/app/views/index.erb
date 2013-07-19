@@ -1,0 +1,10 @@
+<% Post.all.each do |post| %>
+
+<div class="post">
+  <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h1>
+  <h3>by <%= post.author %></h2>
+  <p> <%= post.content %></p>
+</div>
+
+
+<% end %>
