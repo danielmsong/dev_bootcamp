@@ -1,0 +1,21 @@
+<div id="title">
+  <h1><a href='..'>danielcraigslist<a></h1>
+</div>
+
+<div class="container">
+  <h2>categories</h2>
+
+  <ul id="main-categories">
+    <% @categories.map do |category| %>
+    <li><a href='/<%= category.id %>'><%= category.name %></a></li>
+    <% end %>
+  </ul>
+
+</div>
+
+<div class="ads">
+<a href="http://www.skyfall-movie.com/site/" target="_blank"><img class='ad' src='http://d1oi7t5trwfj5d.cloudfront.net/d3/f9ec80f05a11e1baf122000a1d0930/file/Skyfall-International-Banner-daniel-craig-edit.jpg'></a>
+<a href="http://www.heineken.com/us/AgeGateway.aspx" target="_blank"><img class='ad' src='/images/heineken.jpg' ></a>
+<a href="http://www.omegawatches.com/" target="_blank"><img class='ad' src='http://jeffreyhill.typepad.com/.a/6a00d8341d417153ef010535fb433b970c-800wi' ></a>
+<p>Powered by AdChoices</p>
+</div>

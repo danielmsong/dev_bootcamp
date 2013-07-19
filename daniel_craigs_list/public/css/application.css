@@ -1,0 +1,95 @@
+body {
+  background-image: url("http://l.yimg.com/ea/img/-/120118/daniel_craig_17hc5g7-17hc5gb.jpg?x=300&q=80&n=1&sig=29nprwCnW1foJ04F5v8m.Q--");
+  background-repeat: repeat-y;
+  color: dodgerblue;
+}
+
+h1 {
+  font-family: serif;
+  color: white;
+  font-size: 44px;
+}
+
+h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: serif;
+  color: dodgerblue;
+  font-size: 30px;
+}
+
+.ad {
+  width: 400px;
+}
+
+.ads {
+  display: inline-block;
+  float: right;
+  position: absolute;
+}
+
+#title {
+  background-color: dodgerblue;
+  color: white;
+  /*border-radius: 10px;*/
+  padding: 0 0 0 10px;
+  margin-top: -31px;
+}
+
+.container {
+  margin-top: -30px;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  background-color: white;
+  margin-left: 300px;
+  display: inline-block;
+}
+
+th {
+  text-align: left;
+}
+
+#main-categories li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#main-categories li:before {
+  content: url(/images/craighead.jpg);
+  margin-right: 10px;
+}
+
+#main-categories li:hover {
+  position: relative;
+  top: -2px;
+  left: 2px;
+}
+
+a {
+  color: dodgerblue;
+}
+
+#hide {
+  visibility: hidden;
+  color: transparent;
+}
+
+#posts li {
+  padding-bottom: 10px;
+  list-style: none;
+}
+
+.button {
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+  box-shadow: 2px 2px darkgray;
+}
+
+.pop {
+  color: dodgerblue;
+}
